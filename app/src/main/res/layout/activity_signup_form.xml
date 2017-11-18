@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.arif.digitalbloodbank.Signup_form"
+    android:background="#ff0000">
+
+
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logo2"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        />
+
+    <EditText
+
+        android:id="@+id/EditTextRegisterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoView"
+        android:layout_margin="5dp"
+        android:hint="Enter Username"
+        android:backgroundTint="#ffffff"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#f2d7e2"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/EditTextRegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditTextRegisterName"
+        android:layout_margin="5dp"
+        android:backgroundTint="#ffffff"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#f2d7e2"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/EditTextRegisterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditTextRegisterPassword"
+        android:layout_margin="5dp"
+        android:backgroundTint="#ffffff"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#f2d7e2"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="15sp" />
+    <EditText
+        android:id="@+id/EditTextRegisterMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/BloodGroup"
+        android:layout_below="@+id/EditTextRegisterEmail"
+        android:layout_margin="5dp"
+        android:backgroundTint="#ffffff"
+        android:hint="Enter Mobile"
+        android:inputType="phone"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#f2d7e2"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="15sp" />
+
+
+
+
+    <Spinner
+        android:id="@+id/BloodGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditTextRegisterMobile"
+        android:layout_margin="5dp"
+        android:backgroundTint="#fff"
+        android:spinnerMode="dropdown"
+        android:popupBackground="#ff00"
+        android:animateLayoutChanges="true"
+        android:prompt="@string/Gender_Prompt"
+        >
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/Gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/BloodGroup"
+        android:layout_below="@+id/BloodGroup"
+        android:textAlignment="center"
+        android:animateLayoutChanges="true"
+        android:spinnerMode="dropdown"
+        android:backgroundTint="#fff"
+        android:layout_margin="5dp"
+        android:popupBackground="#ff0000"
+        android:prompt="@string/Gender_Prompt">
+
+    </Spinner>
+
+
+    <Button
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Gender"
+        android:text="Location ? "
+        android:background="#fff"
+        android:textColor="#ff0000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_margin="5dp"/>
+
+
+    <Button
+        android:id="@+id/ButtonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location"
+        android:text="REGISTER"
+        android:background="#fff"
+        android:textColor="#ff0000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_margin="5dp" />
+
+
+</RelativeLayout>

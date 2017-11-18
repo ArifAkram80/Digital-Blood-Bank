@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Digital Blood Bank</string>
+
+    <string name="Blood_Prompt">Choose Blood</string>
+    <string name="Gender_Prompt">I am</string>
+
+
+    <string-array name="Blood_array">
+        <item>Choose Blood</item>
+        <item>A (+)ve </item>
+        <item>A (-)ve</item>
+        <item>B (+)ve</item>
+        <item>B (-)ve</item>
+        <item>AB (+)ve</item>
+        <item>AB (-)ve</item>
+        <item>O (+)ve</item>
+        <item>O (-)ve</item>
+    </string-array>
+
+    <string-array name="Gender_Array">
+        <item>I am</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
+
+</resources>

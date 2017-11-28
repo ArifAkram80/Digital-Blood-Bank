@@ -8,34 +8,26 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
-import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 
-import com.google.android.gms.maps.model.LatLng;
 
-/**
- * Created by Arif on 11/19/2017.
- */
-
-public class GoogleLocation {
+class GoogleLocation {
     LocationManager locationManager;
     LocationListener locationListener;
     private Location Location_Co_oridinate;
 
-
-    Context context;
-    Activity activity;
+   private Context context;
+    private Activity activity;
 
     Criteria criteria;
     Looper looper;
 
 
-    public Location getLocation_Co_oridinate() {
+
+    Location getLocation_Co_oridinate() {
         return Location_Co_oridinate;
     }
 
@@ -45,7 +37,7 @@ public class GoogleLocation {
 
         Location_Co_oridinate = null;
 
-        locationManager = (LocationManager) (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
@@ -91,7 +83,7 @@ public class GoogleLocation {
 
     }
 
-    public void GetSingleUpdateLocation()
+    protected void GetSingleUpdateLocation()
     {
 
         if(ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {

@@ -19,7 +19,7 @@
 
     <EditText
 
-        android:id="@+id/EditTextRegisterName"
+        android:id="@+id/xEditTextRegisterName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logoView"
@@ -33,10 +33,10 @@
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/EditTextRegisterPassword"
+        android:id="@+id/xEditTextRegisterPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/EditTextRegisterName"
+        android:layout_below="@+id/xEditTextRegisterName"
         android:layout_margin="5dp"
         android:backgroundTint="#ffffff"
         android:hint="Enter Password"
@@ -48,10 +48,10 @@
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/EditTextRegisterEmail"
+        android:id="@+id/xEditTextRegisterEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/EditTextRegisterPassword"
+        android:layout_below="@+id/xEditTextRegisterPassword"
         android:layout_margin="5dp"
         android:backgroundTint="#ffffff"
         android:hint="Enter Email"
@@ -62,14 +62,14 @@
         android:textCursorDrawable="@drawable/cursor_color"
         android:textSize="15sp" />
     <EditText
-        android:id="@+id/EditTextRegisterMobile"
+        android:id="@+id/xEditTextRegisterMobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/BloodGroup"
-        android:layout_below="@+id/EditTextRegisterEmail"
+        android:layout_alignStart="@+id/xBloodGroup"
+        android:layout_below="@+id/xEditTextRegisterEmail"
         android:layout_margin="5dp"
         android:backgroundTint="#ffffff"
-        android:hint="Enter Mobile"
+        android:hint="Enter Phone Number"
         android:inputType="phone"
         android:textAlignment="center"
         android:textColor="#ffffff"
@@ -81,10 +81,10 @@
 
 
     <Spinner
-        android:id="@+id/BloodGroup"
+        android:id="@+id/xBloodGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/EditTextRegisterMobile"
+        android:layout_below="@+id/xEditTextRegisterMobile"
         android:layout_margin="5dp"
         android:backgroundTint="#fff"
         android:spinnerMode="dropdown"
@@ -95,27 +95,24 @@
     </Spinner>
 
     <Spinner
-        android:id="@+id/Gender"
+        android:id="@+id/xGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/BloodGroup"
-        android:layout_below="@+id/BloodGroup"
+        android:layout_below="@+id/xBloodGroup"
         android:textAlignment="center"
         android:animateLayoutChanges="true"
         android:spinnerMode="dropdown"
         android:backgroundTint="#fff"
         android:layout_margin="5dp"
         android:popupBackground="#ff0000"
-        android:prompt="@string/Gender_Prompt">
-
-    </Spinner>
+        android:prompt="@string/Gender_Prompt" />
 
 
     <Button
-        android:id="@+id/location"
+        android:id="@+id/xlocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Gender"
+        android:layout_below="@+id/xGender"
         android:text="Location ? "
         android:background="#fff"
         android:textColor="#ff0000"
@@ -125,10 +122,10 @@
 
 
     <Button
-        android:id="@+id/ButtonRegister"
+        android:id="@+id/xButtonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/location"
+        android:layout_below="@+id/xlocation"
         android:text="REGISTER"
         android:background="#fff"
         android:textColor="#ff0000"

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "598578288776",
+    "firebase_url": "https://digitalbloodbank-72787.firebaseio.com",
+    "project_id": "digitalbloodbank-72787",
+    "storage_bucket": "digitalbloodbank-72787.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598578288776:android:1a885ef1aa65a405",
+        "android_client_info": {
+          "package_name": "com.example.arif.digitalbloodbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "598578288776-soraht8thc29hl7pspgsr75h7u4m2fnl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arif.digitalbloodbank",
+            "certificate_hash": "733f4f2398522342aca836371de97cc00f8c59db"
+          }
+        },
+        {
+          "client_id": "598578288776-3m4b5ctsmgso30r3cf7spfba7kjdfr4c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrBxjYTFS3xzSzRq9xnVe0NCTMzJkGf98"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "598578288776-3m4b5ctsmgso30r3cf7spfba7kjdfr4c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

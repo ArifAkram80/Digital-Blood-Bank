@@ -18,12 +18,12 @@
 
     <EditText
 
-        android:id="@+id/EditTextLoginName"
+        android:id="@+id/EditTextLoginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logoView"
         android:layout_margin="10dp"
-        android:hint="Enter Username"
+        android:hint="Enter Email"
         android:backgroundTint="#ffffff"
         android:textCursorDrawable="@drawable/cursor_color"
         android:textAlignment="center"
@@ -35,7 +35,7 @@
         android:id="@+id/EditTextLoginPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/EditTextLoginName"
+        android:layout_below="@+id/EditTextLoginEmail"
         android:layout_margin="10dp"
         android:textAlignment="center"
         android:inputType="textPassword"

@@ -2,24 +2,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
-    android:weightSum="5"
+    android:weightSum="10"
     tools:context="com.example.arif.digitalbloodbank.home.Request_Blood">
 
-    <Button
-        android:id="@+id/req_post_new"
+
+
+
+
+
+    <EditText
+        android:id="@+id/post_name"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_weight="2"
-        android:background="@color/redMaterial"
-        android:text="Add New Request"
-        android:textColor="#fff"
-        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:layout_weight="1.2"
+        android:hint="Patient Name"
+        android:inputType="text"
+        android:textColorHint="#FFAB91" />
+
+    <EditText
+        android:id="@+id/post_hospital"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1.2"
+        android:hint="Patient Hospital Details"
+        android:inputType="text"
+        android:textColorHint="#FFAB91" />
+
+    <EditText
+        android:id="@+id/post_phone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1.2"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:textColorHint="#FFAB91" />
+
+
+    <Button
+        android:id="@+id/post_time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1.2"
+        android:background="#fae9e9"
+        android:text="Time of Donation"
+        android:textColor="#ff00"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/post_date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1.2"
+        android:background="#fae9e9"
+        android:text="Date of donation"
+        android:textColor="#ff00"
         android:textStyle="bold" />
 
 
+    <Spinner
+        android:id="@+id/post_blood_group"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:animateLayoutChanges="true"
+        android:backgroundTint="#fff"
+        android:popupBackground="#ff00"
+        android:spinnerMode="dropdown"></Spinner>
+
+    <Spinner
+        android:id="@+id/post_location"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:animateLayoutChanges="true"
+        android:backgroundTint="#fff"
+        android:popupBackground="#ff00"
+        android:spinnerMode="dropdown"></Spinner>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/post_post"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="5"
+            android:background="#fae9e9"
+            android:text="Post"
+            android:textColor="#ff00"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/post_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="5"
+            android:background="#fae9e9"
+            android:text="Cancel"
+            android:textColor="#ff00"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </LinearLayout>

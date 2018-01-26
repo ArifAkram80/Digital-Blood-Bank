@@ -6,12 +6,14 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.media.session.MediaSessionCompat;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -53,9 +55,31 @@ public class Notice_Frag extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_notice_, container, false);
         myBlogList = (RecyclerView) view.findViewById(R.id.my_notice_list);
+
+
+
+
+
+
         bld = view.findViewById(R.id.notice_blood);
         loc = view.findViewById(R.id.notice_loc);
         btn = view.findViewById(R.id.search_cfm);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+                R.array.Blood_array, R.layout.custom_spinner);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getContext(),
+                R.array.Location_Array, R.layout.custom_spinner);
+
+        adapter.setDropDownViewResource(R.layout.custom_spinner2);
+        adapter2.setDropDownViewResource(R.layout.custom_spinner2);
+
+        bld.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        loc.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+
+        bld.setAdapter(adapter);
+        loc.setAdapter(adapter2);
+
+
         mNotification = FirebaseDatabase.getInstance().getReference().child("notifications");
         mAuth = FirebaseAuth.getInstance();
 
@@ -98,7 +122,7 @@ public class Notice_Frag extends Fragment {
             }
         });
 
-
+        myBlogList.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
         mAuth = FirebaseAuth.getInstance();
         return view;
 

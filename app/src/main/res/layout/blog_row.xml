@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_height="wrap_content"
     android:background="#ff00"
+    android:layout_margin="12dp"
     >
 
     <LinearLayout
@@ -20,15 +21,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/groupEdit"
-                android:textColor="#ff00"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textSize="30dp"/>
+                android:textColor="#ff00"
+                android:textSize="30dp" />
 
 
         </LinearLayout>

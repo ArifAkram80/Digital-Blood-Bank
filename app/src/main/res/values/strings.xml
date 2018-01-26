@@ -6,7 +6,7 @@
 
 
     <string-array name="Blood_array">
-        <item>Choose Blood Group</item>
+        <item>Choose Blood </item>
         <item>A(+)ve </item>
         <item>A(-)ve</item>
         <item>B(+)ve</item>
@@ -25,7 +25,7 @@
     </string-array>
 
     <string-array name="Location_Array">
-        <item>Choose Patient Location</item>
+        <item>Choose Location</item>
         <item>Habiganj</item>
         <item>MoulviBazar</item>
         <item>Sunamganj</item>

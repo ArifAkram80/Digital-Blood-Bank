@@ -6,32 +6,27 @@ package com.example.arif.digitalbloodbank.home;
 
 public class user {
     String name;
-    String id;
     String email;
     String phone;
-    String blood, gender;
-    String location;
+    String gender;
+    String id;
 
+    user()
+    {
 
-    public user(String id, String UserName, String UserEmail, String UserPhone, String UserBG, String UserGender, String UserLocation ) {
+    }
+    public user(String UserName, String UserEmail, String UserPhone, String UserGender,String id) {
 
-        this.id = id;
         name = UserName;
         email = UserEmail;
         phone = UserPhone;
-        blood = UserBG;
         gender = UserGender;
-        location = UserLocation;
+        this.id=id;
 
     }
-
 
     public String getName() {
         return name;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getEmail() {
@@ -42,15 +37,9 @@ public class user {
         return phone;
     }
 
-    public String getBlood() {
-        return blood;
-    }
-
     public String getGender() {
         return gender;
     }
+    public String getId(){return  id;}
 
-    public String getLocation() {
-        return location;
-    }
 }

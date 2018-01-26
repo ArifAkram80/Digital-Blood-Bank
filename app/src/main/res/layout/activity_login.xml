@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0000"
+    tools:context="com.example.arif.digitalbloodbank.Login">
+
+    <LinearLayout
+
+        android:focusedByDefault="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logoView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:src="@drawable/logo2" />
+
+        <EditText
+
+
+            android:id="@+id/UserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ffffff"
+            android:hint="Enter Email"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textColorHint="#f2d7e2"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="20sp" />
+
+        <EditText
+
+
+            android:id="@+id/UserPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:backgroundTint="#ffffff"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textColorHint="#f2d7e2"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="20sp" />
+
+
+        <Button
+            android:id="@+id/ButtonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+
+            android:layout_margin="10dp"
+            android:background="#fff"
+            android:text="Login"
+            android:textColor="#ff0000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/ButtonSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:background="#fff"
+            android:text="Sign Up"
+            android:textColor="#ff0000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ButtonRecovery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:background="#ff0000"
+            android:shadowColor="#00e"
+            android:shadowDx="5"
+            android:shadowDy="10"
+            android:shadowRadius="40"
+            android:text="Recover Account ?"
+            android:textColor="#fff"
+            android:textSize="10sp"
+            android:textStyle="italic" />
+
+
+    </LinearLayout>
+</ScrollView>

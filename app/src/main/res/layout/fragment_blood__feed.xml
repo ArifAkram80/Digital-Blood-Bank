@@ -2,18 +2,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.arif.digitalbloodbank.home.Blood_Feed_Frag"
-    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/Button_frag1"
+
+    >
+
+
+    <android.support.v7.widget.RecyclerView
+
+
+        android:id="@+id/my_blog_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:text="Fragment 1"
-        android:textColor="#fff"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_margin="20dp"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

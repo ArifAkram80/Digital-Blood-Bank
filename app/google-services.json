@@ -1,35 +1,43 @@
 {
   "project_info": {
-    "project_number": "598578288776",
-    "firebase_url": "https://digitalbloodbank-72787.firebaseio.com",
-    "project_id": "digitalbloodbank-72787",
-    "storage_bucket": "digitalbloodbank-72787.appspot.com"
+    "project_number": "522569446393",
+    "firebase_url": "https://digital-blood-bank-v3.firebaseio.com",
+    "project_id": "digital-blood-bank-v3",
+    "storage_bucket": "digital-blood-bank-v3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:598578288776:android:1a885ef1aa65a405",
+        "mobilesdk_app_id": "1:522569446393:android:1a885ef1aa65a405",
         "android_client_info": {
           "package_name": "com.example.arif.digitalbloodbank"
         }
       },
       "oauth_client": [
         {
-          "client_id": "598578288776-soraht8thc29hl7pspgsr75h7u4m2fnl.apps.googleusercontent.com",
+          "client_id": "522569446393-aekt9sd7ggffugpg74k253gj0nnfa24j.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.arif.digitalbloodbank",
-            "certificate_hash": "733f4f2398522342aca836371de97cc00f8c59db"
+            "certificate_hash": "877adcb883bdcd19e4a0b021e6013e903712330b"
           }
         },
         {
-          "client_id": "598578288776-3m4b5ctsmgso30r3cf7spfba7kjdfr4c.apps.googleusercontent.com",
+          "client_id": "522569446393-g0fnu74riafgm829hrkid8pf7ka4ptn6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arif.digitalbloodbank",
+            "certificate_hash": "ddeb18e8042b2dc3fd858985dad3396ee39f4e79"
+          }
+        },
+        {
+          "client_id": "522569446393-k0p2di30e8ar5belhrdla9e31pdfqn74.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCrBxjYTFS3xzSzRq9xnVe0NCTMzJkGf98"
+          "current_key": "AIzaSyB_3sZ2ZxIVBViAD0KXFR-3qtvRQdf42yg"
         }
       ],
       "services": {
@@ -40,7 +48,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "598578288776-3m4b5ctsmgso30r3cf7spfba7kjdfr4c.apps.googleusercontent.com",
+              "client_id": "522569446393-k0p2di30e8ar5belhrdla9e31pdfqn74.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

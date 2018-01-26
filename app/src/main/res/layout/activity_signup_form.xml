@@ -1,46 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.arif.digitalbloodbank.Signup_form"
-    android:background="#ff0000">
+    android:background="#ff0000"
+    android:orientation="vertical"
+    tools:context="com.example.arif.digitalbloodbank.Signup_form">
 
 
     <ImageView
         android:id="@+id/logoView"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/logo2"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:layout_margin="5dp"
-        />
+        android:src="@drawable/logo2" />
 
     <EditText
 
         android:id="@+id/xEditTextRegisterName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logoView"
         android:layout_margin="5dp"
+        android:backgroundTint="#ffffff"
         android:hint="Enter Username"
-        android:backgroundTint="#ffffff"
-        android:textCursorDrawable="@drawable/cursor_color"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textColorHint="#f2d7e2"
-        android:textSize="15sp" />
-
-    <EditText
-        android:id="@+id/xEditTextRegisterPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/xEditTextRegisterName"
-        android:layout_margin="5dp"
-        android:backgroundTint="#ffffff"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textColorHint="#f2d7e2"
@@ -51,7 +36,6 @@
         android:id="@+id/xEditTextRegisterEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/xEditTextRegisterPassword"
         android:layout_margin="5dp"
         android:backgroundTint="#ffffff"
         android:hint="Enter Email"
@@ -61,12 +45,26 @@
         android:textColorHint="#f2d7e2"
         android:textCursorDrawable="@drawable/cursor_color"
         android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/xEditTextRegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:backgroundTint="#ffffff"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#f2d7e2"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="15sp" />
+
+
     <EditText
         android:id="@+id/xEditTextRegisterMobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/xBloodGroup"
-        android:layout_below="@+id/xEditTextRegisterEmail"
         android:layout_margin="5dp"
         android:backgroundTint="#ffffff"
         android:hint="Enter Phone Number"
@@ -78,60 +76,52 @@
         android:textSize="15sp" />
 
 
-
-
     <Spinner
         android:id="@+id/xBloodGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/xEditTextRegisterMobile"
         android:layout_margin="5dp"
-        android:backgroundTint="#fff"
-        android:spinnerMode="dropdown"
-        android:popupBackground="#ff00"
         android:animateLayoutChanges="true"
-        android:prompt="@string/Gender_Prompt"
-        >
-    </Spinner>
+        android:backgroundTint="#fff"
+        android:popupBackground="#ff00"
+        android:prompt="@string/Blood_Prompt"
+        android:spinnerMode="dropdown"></Spinner>
 
     <Spinner
         android:id="@+id/xGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/xBloodGroup"
-        android:textAlignment="center"
-        android:animateLayoutChanges="true"
-        android:spinnerMode="dropdown"
-        android:backgroundTint="#fff"
         android:layout_margin="5dp"
+        android:animateLayoutChanges="true"
+        android:backgroundTint="#fff"
         android:popupBackground="#ff0000"
-        android:prompt="@string/Gender_Prompt" />
+        android:prompt="@string/Gender_Prompt"
+        android:spinnerMode="dropdown"
+        android:textAlignment="center" />
 
 
-    <Button
+    <Spinner
         android:id="@+id/xlocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/xGender"
-        android:text="Location ? "
-        android:background="#fff"
-        android:textColor="#ff0000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_margin="5dp"/>
+        android:layout_margin="5dp"
+        android:animateLayoutChanges="true"
+        android:backgroundTint="#fff"
+        android:popupBackground="#ff0000"
+        android:spinnerMode="dropdown"
+        android:textAlignment="center" />
 
 
     <Button
         android:id="@+id/xButtonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/xlocation"
-        android:text="REGISTER"
+        android:layout_margin="10dp"
         android:background="#fff"
+        android:text="REGISTER"
         android:textColor="#ff0000"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_margin="5dp" />
+        android:textStyle="bold" />
 
 
-</RelativeLayout>
+</LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.arif.digitalbloodbank.home;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.arif.digitalbloodbank.R;
+import com.example.arif.digitalbloodbank.post.Post_New;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,7 +22,7 @@ import com.example.arif.digitalbloodbank.R;
 public class Request_Blood extends Fragment {
 
     public static final String TAG = "Request_Blood_Frag";
-    private Button BtnFrag;
+    private Button btn_post_new;
 
 
     @Override
@@ -34,13 +36,15 @@ public class Request_Blood extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        BtnFrag = view.findViewById(R.id.Button_frag3);
+        btn_post_new = view.findViewById(R.id.req_post_new);
 
-        BtnFrag.setOnClickListener(new View.OnClickListener() {
+
+        btn_post_new.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "Button Clicked");
-                Toast.makeText(getActivity(),   "Button Clicked", Toast.LENGTH_SHORT).show();
+
+                Intent post_new = new Intent(getActivity(), Post_New.class);
+                startActivity(post_new);
             }
         });
 

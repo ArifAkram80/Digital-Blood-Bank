@@ -7,18 +7,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TabHost;
+import android.widget.TableLayout;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -37,6 +46,8 @@ public class Request_Blood extends Fragment {
 
     public static final String TAG = "Request_Blood_Frag";
     private Button btn_post_new;
+
+    ViewPager viewPager;
 
     View view;
 
@@ -73,25 +84,19 @@ public class Request_Blood extends Fragment {
         firebaseAuth = FirebaseAuth.getInstance();
         databaseuser = FirebaseDatabase.getInstance().getReference("user");
 
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE|WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
         return view;
     }
+
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        /*btn_post_new = view.findViewById(R.id.req_post_new);
-
-
-        btn_post_new.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent post_new = new Intent(getActivity(), Post_New.class);
-                startActivity(post_new);
-            }
-        });*/
 
     }
+
 
     private void btnListener() {
         btnTimePicker.setOnClickListener(new View.OnClickListener() {
@@ -181,9 +186,25 @@ public class Request_Blood extends Fragment {
                 //showDialog(Date_id);
             }
         });
+
+
+
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.detach(Request_Blood.this).attach(Request_Blood.this).commit();
+
+                viewPager = getActivity().findViewById(R.id.container);
+                TabLayout TL = getActivity().findViewById(R.id.tabs);
+
+                clearForm((ViewGroup) getActivity().findViewById(R.id.post_ROOT));
+
+
+               // viewPager.setCurrentItem(0);
+               // TL.setupWithViewPager(viewPager);
 
                 //finish();
             }
@@ -197,17 +218,52 @@ public class Request_Blood extends Fragment {
                 if (check()) {
 
                     Post p = new Post(Str_name, Str_details, Str_phone, time1, date1, Str_bloodGroup, Str_Location, currentUser.getUid());
-
-
                     DatabaseReference data = FirebaseDatabase.getInstance().getReference().child("user");
                     data = data.push();
                     data.setValue(p);
+
                     Toast.makeText(getActivity(), "Posted Successfully", Toast.LENGTH_SHORT).show();
+
+
+                    // After Posting Successfully it goes to Blood Feed Code
+                    clearForm((ViewGroup) getActivity().findViewById(R.id.post_ROOT));
+                    viewPager = getActivity().findViewById(R.id.container);
+                    TabLayout TL = getActivity().findViewById(R.id.tabs);
+                    viewPager.setCurrentItem(0);
+                    TL.setupWithViewPager(viewPager);
+
+                }
+                else{
+                    Toast.makeText(getActivity(), "Posting Failed! Check Again..", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
 
+    }
+
+
+    private void clearForm(ViewGroup group)
+    {
+        BloodGroup.setSelection(0);
+        Location.setSelection(0);
+
+        for (int i = 0, count = group.getChildCount(); i < count; ++i) {
+            View view = group.getChildAt(i);
+            if (view instanceof EditText) {
+                ((EditText)view).setText("");
+            }
+
+            if(view instanceof ViewGroup && (((ViewGroup)view).getChildCount() > 0))
+                clearForm((ViewGroup)view);
+        }
+    }
+
+
+
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager =(InputMethodManager)getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     private void getValue() {
@@ -221,7 +277,9 @@ public class Request_Blood extends Fragment {
     }
 
     private boolean check() {
-        if (!TextUtils.isEmpty(Str_phone) && !TextUtils.isEmpty(Str_name) && !TextUtils.isEmpty(Str_details) && !TextUtils.isEmpty(time1) && !TextUtils.isEmpty(date1) && !TextUtils.isEmpty(Str_bloodGroup) && !TextUtils.isEmpty(Str_Location))
+        if(Str_bloodGroup.equals("Choose Blood") || Str_Location.equals("Choose Location"))
+            return false;
+        else if (!TextUtils.isEmpty(Str_phone) && !TextUtils.isEmpty(Str_name) && !TextUtils.isEmpty(Str_details) && !TextUtils.isEmpty(time1) && !TextUtils.isEmpty(date1) && !TextUtils.isEmpty(Str_bloodGroup) && !TextUtils.isEmpty(Str_Location))
             return true;
         else
             return false;
@@ -241,7 +299,7 @@ public class Request_Blood extends Fragment {
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.Blood_array, R.layout.custom_spinner);
+                R.array.Blood_array, R.layout.custom_spinner2);
         BloodGroup.setPrompt("Choose Blood Group");
 
         // Specify the layout to use when the list of choices appears
@@ -251,15 +309,17 @@ public class Request_Blood extends Fragment {
 
 
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getActivity(),
-                R.array.Location_Array, R.layout.custom_spinner);
+                R.array.Location_Array, R.layout.custom_spinner2);
         Location.setPrompt("Choose Location");
         // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(R.layout.custom_spinner);
+        adapter2.setDropDownViewResource(R.layout.custom_spinner);
         // Apply the adapter to the spinner
         Location.setAdapter(adapter2);
 
 
     }
+
+
 
     private void itemlistener() {
         BloodGroup.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

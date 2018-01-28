@@ -4,6 +4,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.widget.TabHost;
 
 import com.google.firebase.auth.FirebaseUser;
 
@@ -15,7 +16,6 @@ import java.util.List;
  */
 
 public class SectionPageManager extends FragmentPagerAdapter {
-
 
     private final List<Fragment> mFragmentList = new ArrayList<>();
     private final List<String> mFragmenTitleList = new ArrayList<>();

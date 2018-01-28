@@ -4,6 +4,6 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:padding="5dp"
-    android:textColor="#fff"
+    android:textColor="#ffffff"
     android:textCursorDrawable="@drawable/cursor_color"
     android:textSize="15sp" />

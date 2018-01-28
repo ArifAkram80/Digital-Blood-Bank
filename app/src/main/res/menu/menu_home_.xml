@@ -2,14 +2,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.arif.digitalbloodbank.home.Home_Activity">
+
+    <item
+        android:id="@+id/action_nearbyHospital"
+        android:orderInCategory="100"
+        android:title="Nearby Hospitals"
+        app:showAsAction="never"
+        />
+
     <item
         android:id="@+id/action_about"
         android:orderInCategory="100"
         android:title="About"
         app:showAsAction="never"
-
-
-        ></item>
+        />
     <item
         android:id="@+id/action_logout"
         android:orderInCategory="100"

@@ -1,5 +1,6 @@
 package com.example.arif.digitalbloodbank.home;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -15,13 +16,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.view.inputmethod.InputMethodManager;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.arif.digitalbloodbank.About;
+import com.example.arif.digitalbloodbank.Hospital_Map;
 import com.example.arif.digitalbloodbank.Login;
 import com.example.arif.digitalbloodbank.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -70,6 +75,16 @@ public class Home_Activity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+
+            if (getCurrentFocus() != null) {
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+            }
+
+        return super.dispatchTouchEvent(ev);
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -79,6 +94,11 @@ public class Home_Activity extends AppCompatActivity {
 
         if (id == R.id.action_about) {
             Intent I = new Intent(getApplicationContext(), About.class);
+            startActivity(I);
+            return true;
+        }
+        if (id == R.id.action_nearbyHospital) {
+            Intent I = new Intent(getApplicationContext(), Hospital_Map.class);
             startActivity(I);
             return true;
         }

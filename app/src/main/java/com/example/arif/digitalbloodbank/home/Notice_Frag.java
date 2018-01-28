@@ -152,6 +152,7 @@ public class Notice_Frag extends Fragment {
             protected void onBindViewHolder(final UserViewHolder holder, int position, final user model) {
 
                 holder.setName(model.getName());
+                holder.setNumber(model.getPhone());
 
                 final String key = this.getRef(position).getKey();
 
@@ -167,7 +168,7 @@ public class Notice_Frag extends Fragment {
                         mNotification.child(model.getId()).push().setValue(notificationData).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-
+                                holder.btn.setText("SENT");
                             }
                         });
 
@@ -218,8 +219,13 @@ public class Notice_Frag extends Fragment {
             TextView textView = myView.findViewById(R.id.notice_name);
             textView.setText(name);
 
+
         }
 
 
+        public void setNumber(String phone) {
+            TextView textView =myView.findViewById(R.id.number);
+            textView.setText("Phone: "+phone);
+        }
     }
 }

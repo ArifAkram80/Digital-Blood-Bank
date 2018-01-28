@@ -135,7 +135,9 @@ public class Signup_form extends AppCompatActivity {
                     } else if (task.isSuccessful()) {
                         Toast.makeText(getApplicationContext(), "Account Created !", Toast.LENGTH_SHORT).show();
                         addUserToFirebase();
+                        FirebaseAuth.getInstance().signOut();
                         Intent I = new Intent(Signup_form.this, Login.class);
+                        startActivity(I);
                     }
                 }
             });
@@ -152,7 +154,8 @@ public class Signup_form extends AppCompatActivity {
             user USER = new user(Str_user_name, Str_Email, Str_phone_number, Str_gender,id);
             databaseuser.child(Str_Location).child(Str_bloodGroup).child(id).setValue(USER);
             userDatabase.child(id).setValue(USER);
-            startActivity(new Intent(getApplicationContext(), Home_Activity.class));
+
+           // startActivity(new Intent(getApplicationContext(), Home_Activity.class));
             finish();
 
         } else {

@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-android:background="#dcdcde"
-    tools:context="com.example.arif.digitalbloodbank.home.Notice_Frag"
+    android:background="@drawable/backround"
+    tools:context="com.example.arif.digitalbloodbank.home.Search_Frag"
     >
 
     <LinearLayout
@@ -44,7 +44,7 @@ android:background="#dcdcde"
             android:layout_height="40dp"
             android:id="@+id/search_cfm"
             android:layout_width="0dp"
-            android:background="#e53935"
+            android:background="#d32f2f"
             android:textColor="#fff"
             android:layout_weight="3"
             android:text="Search" />

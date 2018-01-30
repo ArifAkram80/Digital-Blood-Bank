@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="@drawable/backround"
     android:id="@+id/post_ROOT"
     android:orientation="vertical"
 
@@ -35,7 +35,9 @@
             android:layout_weight="1.5"
             android:hint="Patient Name"
             android:inputType="text"
-            android:textColorHint="#ff8a80" />
+            android:textAlignment="center"
+            android:drawableLeft="@drawable/ic_person_white_24dp"
+            android:textColorHint="#fff" />
 
         <EditText
             android:id="@+id/post_hospital"
@@ -43,9 +45,11 @@
             android:layout_height="0dp"
             android:layout_margin="10dp"
             android:layout_weight="1.5"
+            android:drawableLeft="@drawable/ic_local_hospital_white_24dp"
             android:hint="Patient Hospital Details"
             android:inputType="text"
-            android:textColorHint="#ff8a80" />
+            android:textAlignment="center"
+            android:textColorHint="#fff" />
 
         <EditText
             android:id="@+id/post_phone"
@@ -55,7 +59,9 @@
             android:layout_weight="1.5"
             android:hint="Phone"
             android:inputType="phone"
-            android:textColorHint="#ff8a80" />
+            android:textColorHint="#fff"
+            android:drawableLeft="@drawable/ic_phone_white_24dp"
+            android:textAlignment="center"/>
 
 
         <Button
@@ -64,9 +70,9 @@
             android:layout_height="0dp"
             android:layout_margin="10dp"
             android:layout_weight="1.5"
-            android:background="#ff00"
+            android:background="@drawable/background_login"
             android:text="Time"
-            android:textColor="#ffffff"
+            android:textColor="#ff00"
             android:textStyle="bold" />
 
         <Button
@@ -75,9 +81,9 @@
             android:layout_height="0dp"
             android:layout_margin="10dp"
             android:layout_weight="1.5"
-            android:background="#ff00"
+            android:background="@drawable/background_login"
             android:text="Date"
-            android:textColor="#ffffff"
+            android:textColor="#ff00"
             android:textStyle="bold" />
 
 
@@ -87,9 +93,9 @@
             android:layout_height="0dp"
             android:layout_weight="1.2"
             android:animateLayoutChanges="true"
-            android:backgroundTint="#ff00"
-            android:popupBackground="#ff00"
-            android:spinnerMode="dropdown"></Spinner>
+            android:backgroundTint="#fff"
+            android:popupBackground="#fff"
+            android:spinnerMode="dropdown"/>
 
         <Spinner
             android:id="@+id/post_location"
@@ -97,9 +103,9 @@
             android:layout_height="0dp"
             android:layout_weight="1.2"
             android:animateLayoutChanges="true"
-            android:backgroundTint="#ff00"
-            android:popupBackground="#ff00"
-            android:spinnerMode="dropdown"></Spinner>
+            android:backgroundTint="#fff"
+            android:popupBackground="#fff"
+            android:spinnerMode="dropdown"/>
 
 
     <LinearLayout
@@ -115,9 +121,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="5"
-            android:background="#ff00"
+            android:background="@drawable/background_login"
             android:text="Cancel"
-            android:textColor="#ffffff"
+            android:textColor="#ff00"
             android:textStyle="bold" />
 
         <Button
@@ -126,9 +132,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="5"
-            android:background="#ff00"
+            android:background="@drawable/background_login"
             android:text="Post"
-            android:textColor="#ffffff"
+            android:textColor="#ff00"
             android:textStyle="bold" />
 
 

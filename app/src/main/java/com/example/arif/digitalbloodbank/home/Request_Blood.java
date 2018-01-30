@@ -299,20 +299,20 @@ public class Request_Blood extends Fragment {
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.Blood_array, R.layout.custom_spinner2);
+                R.array.Blood_array, R.layout.custom_spinner);
         BloodGroup.setPrompt("Choose Blood Group");
 
         // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(R.layout.custom_spinner);
+        adapter.setDropDownViewResource(R.layout.custom_spinner2);
         // Apply the adapter to the spinner
         BloodGroup.setAdapter(adapter);
 
 
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getActivity(),
-                R.array.Location_Array, R.layout.custom_spinner2);
+                R.array.Location_Array, R.layout.custom_spinner);
         Location.setPrompt("Choose Location");
         // Specify the layout to use when the list of choices appears
-        adapter2.setDropDownViewResource(R.layout.custom_spinner);
+        adapter2.setDropDownViewResource(R.layout.custom_spinner2);
         // Apply the adapter to the spinner
         Location.setAdapter(adapter2);
 

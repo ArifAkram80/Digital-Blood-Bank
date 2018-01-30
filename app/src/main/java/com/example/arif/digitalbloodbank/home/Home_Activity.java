@@ -3,27 +3,16 @@ package com.example.arif.digitalbloodbank.home;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
 
 import android.view.inputmethod.InputMethodManager;
-import android.widget.TabHost;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.arif.digitalbloodbank.About;
 import com.example.arif.digitalbloodbank.Hospital_Map;
@@ -61,7 +50,7 @@ public class Home_Activity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         SectionPageManager adapter = new SectionPageManager(getSupportFragmentManager());
         adapter.addFragment(new Blood_Feed_Frag(), "Blood Feed");
-        adapter.addFragment(new Notice_Frag(), "Search");
+        adapter.addFragment(new Search_Frag(), "Search");
         adapter.addFragment(new Request_Blood(), "Request Blood");
 
         viewPager.setAdapter(adapter);
@@ -105,7 +94,7 @@ public class Home_Activity extends AppCompatActivity {
         if (id == R.id.action_logout) {
             auth.signOut();
             finish();
-           Intent I = new Intent(getApplicationContext(), Login.class);
+            Intent I = new Intent(getApplicationContext(), Login.class);
             startActivity(I);
             return true;
         }

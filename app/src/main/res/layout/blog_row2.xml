@@ -10,30 +10,23 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="3"
-        >
-    <TextView
-        android:id="@+id/notice_name"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:layout_weight="2"
-        android:textColor="#d32f2f"
-        android:text="Doner name"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
-    <TextView
-        android:layout_weight="1"
-        android:layout_width="150dp"
-        android:id="@+id/number"
-        android:text="number"
-        android:textColor="#ff8a80"
-        android:layout_height="wrap_content">
+        android:orientation="vertical">
 
-    </TextView>
-        </LinearLayout>
+        <TextView
+            android:id="@+id/notice_name"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Doner name"
+            android:textAlignment="center"
+            android:textColor="#e53935"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
 
     <Button
         android:layout_weight="1"

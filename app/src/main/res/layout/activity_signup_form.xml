@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff0000"
+    android:background="@drawable/backround"
     android:orientation="vertical"
     tools:context="com.example.arif.digitalbloodbank.Signup_form">
 
@@ -24,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:drawableLeft="@drawable/ic_person_white_24dp"
         android:backgroundTint="#ffffff"
         android:hint="Enter Username"
         android:textAlignment="center"
@@ -34,6 +35,7 @@
 
     <EditText
         android:id="@+id/xEditTextRegisterEmail"
+        android:drawableLeft="@drawable/ic_email_white_24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -50,6 +52,7 @@
         android:id="@+id/xEditTextRegisterPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_lock_white_24dp"
         android:layout_margin="5dp"
         android:backgroundTint="#ffffff"
         android:hint="Enter Password"
@@ -65,6 +68,7 @@
         android:id="@+id/xEditTextRegisterMobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_phone_white_24dp"
         android:layout_margin="5dp"
         android:backgroundTint="#ffffff"
         android:hint="Enter Phone Number"
@@ -83,9 +87,9 @@
         android:layout_margin="5dp"
         android:animateLayoutChanges="true"
         android:backgroundTint="#fff"
-        android:popupBackground="#ff00"
+        android:popupBackground="#fff"
         android:prompt="@string/Blood_Prompt"
-        android:spinnerMode="dropdown"></Spinner>
+        android:spinnerMode="dropdown"/>
 
     <Spinner
         android:id="@+id/xGender"
@@ -94,7 +98,7 @@
         android:layout_margin="5dp"
         android:animateLayoutChanges="true"
         android:backgroundTint="#fff"
-        android:popupBackground="#ff0000"
+        android:popupBackground="#fff"
         android:prompt="@string/Gender_Prompt"
         android:spinnerMode="dropdown"
         android:textAlignment="center" />
@@ -107,7 +111,7 @@
         android:layout_margin="5dp"
         android:animateLayoutChanges="true"
         android:backgroundTint="#fff"
-        android:popupBackground="#ff0000"
+        android:popupBackground="#fff"
         android:spinnerMode="dropdown"
         android:textAlignment="center" />
 
@@ -117,9 +121,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="#fff"
+        android:padding="12dp"
+        android:background="@drawable/background_login"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
         android:text="REGISTER"
-        android:textColor="#ff0000"
+        android:textColor="#cc1616"
         android:textSize="20sp"
         android:textStyle="bold" />
 

@@ -14,6 +14,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.view.Menu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.arif.digitalbloodbank.home.Home_Activity;
@@ -29,8 +30,9 @@ import com.google.firebase.iid.FirebaseInstanceId;
 
 public class Login extends AppCompatActivity {
     private EditText email, pass;
-    private Button ButtonLogin, ButtonSignup, ButtonRecovery;
+    private Button ButtonLogin, ButtonSignup;
     private ProgressDialog dialog;
+    private TextView ButtonRecovery;
     private FirebaseAuth mAuth;
     private DatabaseReference rUserDatabase;
 

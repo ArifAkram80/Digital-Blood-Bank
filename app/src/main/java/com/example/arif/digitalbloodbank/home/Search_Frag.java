@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.media.session.MediaSessionCompat;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,7 +16,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.arif.digitalbloodbank.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -34,9 +32,9 @@ import java.util.HashMap;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Notice_Frag extends Fragment {
+public class Search_Frag extends Fragment {
 
-    public static final String TAG = "Notice_Frag";
+    public static final String TAG = "Search_Frag";
     private Button btn;
     private RecyclerView myBlogList;
     private Spinner bld, loc;
@@ -53,7 +51,7 @@ public class Notice_Frag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_notice_, container, false);
+        View view = inflater.inflate(R.layout.fragment_search_, container, false);
         myBlogList = (RecyclerView) view.findViewById(R.id.my_notice_list);
 
 
@@ -73,8 +71,9 @@ public class Notice_Frag extends Fragment {
         adapter.setDropDownViewResource(R.layout.custom_spinner2);
         adapter2.setDropDownViewResource(R.layout.custom_spinner2);
 
-        bld.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-        loc.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        bld.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+        loc.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+
 
         bld.setAdapter(adapter);
         loc.setAdapter(adapter2);
@@ -151,8 +150,9 @@ public class Notice_Frag extends Fragment {
             @Override
             protected void onBindViewHolder(final UserViewHolder holder, int position, final user model) {
 
+
                 holder.setName(model.getName());
-                holder.setNumber(model.getPhone());
+
 
                 final String key = this.getRef(position).getKey();
 
@@ -169,16 +169,15 @@ public class Notice_Frag extends Fragment {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 holder.btn.setText("SENT");
+                                holder.btn.setClickable(false);
                             }
                         });
 
 //Toast.makeText(getActivity().getApplicationContext(),model.getId() ,Toast.LENGTH_SHORT).show();
-                       // Toast.makeText(getActivity().getApplicationContext(), "Post Notification", Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(getActivity().getApplicationContext(), "Post Notification", Toast.LENGTH_SHORT).show();
 //currentUser.getUid();
                     }
                 });
-
-
 
             }
 
@@ -219,13 +218,8 @@ public class Notice_Frag extends Fragment {
             TextView textView = myView.findViewById(R.id.notice_name);
             textView.setText(name);
 
-
         }
 
 
-        public void setNumber(String phone) {
-            TextView textView =myView.findViewById(R.id.number);
-            textView.setText("Phone: "+phone);
-        }
     }
 }

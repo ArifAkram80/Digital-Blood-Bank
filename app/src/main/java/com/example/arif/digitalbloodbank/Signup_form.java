@@ -194,7 +194,7 @@ public class Signup_form extends AppCompatActivity {
                 R.array.Blood_array, R.layout.custom_spinner);
         BloodGroup.setPrompt("Choose Blood");
 // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(R.layout.custom_spinner);
+        adapter.setDropDownViewResource(R.layout.custom_spinner2);
 // Apply the adapter to the spinner
         BloodGroup.setAdapter(adapter);
 
@@ -204,7 +204,7 @@ public class Signup_form extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
                 R.array.Gender_Array, R.layout.custom_spinner);
 // Specify the layout to use when the list of choices appears
-        adapter2.setDropDownViewResource(R.layout.custom_spinner);
+        adapter2.setDropDownViewResource(R.layout.custom_spinner2);
 // Apply the adapter2 to the spinner
         Gender.setAdapter(adapter2);
 
@@ -213,7 +213,7 @@ public class Signup_form extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,
                 R.array.Location_Donor_Array, R.layout.custom_spinner);
 // Specify the layout to use when the list of choices appears
-        adapter2.setDropDownViewResource(R.layout.custom_spinner);
+        adapter3.setDropDownViewResource(R.layout.custom_spinner2);
 // Apply the adapter2 to the spinner
         Location.setAdapter(adapter3);
 
